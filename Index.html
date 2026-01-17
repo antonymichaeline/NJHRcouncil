@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Jersey HR Council</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEqjNt3bQTaDA/company-logo_200_200/company-logo_200_200/0/1630621807238?e=1770249600&v=beta&t=5N_2z3OARWFXmagvWGWYjzhinRi8qx0sG18-rWh06G0" alt="NJHRC Logo">
+                <span>NJ HR Council</span>
+            </div>
+            
+            <div class="nav-links">
+                <button class="tab-btn active" onclick="switchTab('home')">Overview</button>
+                <button class="tab-btn" onclick="switchTab('updates')">Updates</button>
+                <button class="tab-btn" onclick="switchTab('awards')">Awards</button>
+                <button class="tab-btn" onclick="switchTab('members')">Members</button>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://www.linkedin.com/company/new-jersey-hr-council/" target="_blank" class="btn-primary">
+                    <i class="fab fa-linkedin-in"></i> Connect
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-bg">
+            <img src="https://media.licdn.com/dms/image/v2/C4E1BAQHQch9Wq27-Tw/company-background_10000/company-background_10000/0/1614018579626/new_jersey_hr_council_cover?e=1769277600&v=beta&t=tbPJ33r1_aNTv67rjInID640Ju6KYbFgbvRWU4AbpSM" alt="Background">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="badge">The Voice of HR in NJ</span>
+            <h1>Connect. Learn. <span class="gradient-text">Impact.</span></h1>
+            <p>The premier community for Human Resources leaders across the Garden State.</p>
+        </div>
+    </header>
+
+    <main id="app-container" class="container">
+        </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 New Jersey HR Council.</p>
+            <button onclick="toggleAdmin()" class="admin-trigger"><i class="fas fa-lock"></i> Staff Login</button>
+        </div>
+    </footer>
+
+    <div id="admin-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2><i class="fas fa-edit"></i> Content Manager</h2>
+            <p>Update the website data below (JSON format).</p>
+            <textarea id="json-editor"></textarea>
+            <div class="modal-actions">
+                <button onclick="saveData()" class="btn-primary">Save & Download Update</button>
+                <button onclick="toggleAdmin()" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
